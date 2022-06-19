@@ -1,7 +1,11 @@
-elif Vopros == 1:
-    print("Enter Private Key")
-    d = int(input("d = "))
-    n = int(input("n = "))
-    c = int(input("Enter what need to decrypt  = "))  # i*e % F = 1 !@! i*d = 1 (mod F)
-    M = (c ** d) % n
-    print("Decrypt message = ",M)
+i = 0
+    while (i * e % F != 1):
+        i += 1
+        d = i
+        if i == e:
+            i += 1
+    C = M ** e % n
+    print("crypt message: ",C)
+    print(e)
+    print(d)
+    print(n)
